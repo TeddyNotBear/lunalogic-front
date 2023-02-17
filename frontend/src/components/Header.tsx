@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 function Header(props: { }) {
 
     const Menu = [
-        { title: "Discover", path: "discorver" },
+        { title: "Discover", path: "discover" },
+        { title: "Galleries", path: "galleries" },
         { title: "Marketplace", path: "marketplace" },
         { title: "Activity", path: "activity" },
     ];

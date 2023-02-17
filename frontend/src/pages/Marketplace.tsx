@@ -25,7 +25,6 @@ function Marketplace(props: { }) {
                         <NFTCard owner="Hardoah Pro" metadata={metadata} current_bid="0.43" />
                         <NFTCard owner="Hardoah Pro" metadata={metadata} current_bid="0.43" />
                         <NFTCard owner="Hardoah Pro" metadata={metadata} current_bid="0.43" />
-                        <NFTCard owner="Hardoah Pro" metadata={metadata} current_bid="0.43" />
                     </SimpleGrid>
                 </div>
             </div>

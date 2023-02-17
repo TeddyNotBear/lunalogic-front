@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Marketplace } from './pages/Marketplace';
 import { Home } from './pages/Home';
+import { Galleries } from './pages/Galleries';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,6 +19,7 @@ root.render(
         <Route path="/">
           <Route index element={<Home />} />
           <Route path="marketplace" element={<Marketplace />} />
+          <Route path="galleries" element={<Galleries />} />
           <Route path="home" element={<Home />} />
         </Route>
       </Routes>

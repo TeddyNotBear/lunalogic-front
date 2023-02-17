@@ -1,4 +1,5 @@
 import eth_icon from '../images/eth_icon.png';
+import { Auction } from '../pages/Auction';
 
 export interface IMetadata {
     image: string,

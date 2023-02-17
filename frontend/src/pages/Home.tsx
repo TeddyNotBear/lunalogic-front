@@ -18,7 +18,7 @@ function Home(props: { }) {
                     </div>
                     <div className="flex gap-10 items-center">
                         <div className='flex items-center gap-14'>
-                            <div className='bg-black text-white py-4 px-8 font-medium cursor-pointer'>Discover</div>
+                            <div className='bg-black text-white py-4 px-8 font-medium cursor-pointer'>Galleries</div>
                         </div>
                         <Link className="underline underline-offset-4 cursor-pointer" to={'/marketplace'}>Marketplace</Link>
                     </div>

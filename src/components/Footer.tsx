@@ -6,7 +6,7 @@ function Footer(props: { }) {
     return (
         <>
             <div className="flex flex-row my-14 bg-black justify-between p-6">
-                <div className="basis-2/6 grid content-center">
+                <div className="basis-2/6 grid content-center pl-10">
                     <img className="h-12" src={white_logo} alt="brand_logo" />
                     <p className="text-left text-white my-4">Discorver Rare Collections Of Art & NFTs.</p>
                     <div className="text-left">

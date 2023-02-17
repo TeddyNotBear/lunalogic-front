@@ -12,14 +12,14 @@ function Header(props: { }) {
     return (
         <div className="flex justify-around items-center h-20">
             <div>
-                <img className='h-10' src={logo} alt="logo"/>
+                <Link to={'/home'}><img className='h-10' src={logo} alt="logo"/></Link>
             </div>
             <ul className='flex gap-10'>
                 {
                     Menu.map((menu, index) => (
                         <>
                             <li key={index} className="">
-                                <Link className='font-medium' to={``}>{ menu.title }</Link>
+                                <Link className='font-medium' to={`/${menu.path}`}>{ menu.title }</Link>
                             </li>
                         </>
                     ))

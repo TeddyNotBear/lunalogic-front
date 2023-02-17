@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-social-icons';
 
 function Footer(props: { }) {
     return (
-        <div>
+        <>
             <div className="flex flex-row my-14 bg-black justify-between p-6">
                 <div className="basis-2/6 grid content-center">
                     <img className="h-12" src={white_logo} alt="brand_logo" />
@@ -32,7 +32,7 @@ function Footer(props: { }) {
                     <Link className='pt-4 text-sm text-white' to={'/terms'}>Terms</Link>
                 </div>
             </div>
-        </div>  
+        </>  
     );
 
 }

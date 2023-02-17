@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
+import { MdSlowMotionVideo } from 'react-icons/md';
 import nft from '../images/nft.png';
 
 function Home(props: { }) {
@@ -21,6 +22,7 @@ function Home(props: { }) {
                             <div className='bg-black text-white py-4 px-8 font-medium cursor-pointer'>Galleries</div>
                         </div>
                         <Link className="underline underline-offset-4 cursor-pointer" to={'/marketplace'}>Marketplace</Link>
+                        <MdSlowMotionVideo size={32} />
                     </div>
                 </div>
                 <div className="grid justify-items-center">

@@ -1,6 +1,5 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
-import { Header } from './components/Header';
 import { Marketplace } from './pages/Marketplace';
 import { Footer } from './components/Footer';
 import "@rainbow-me/rainbowkit/styles.css";

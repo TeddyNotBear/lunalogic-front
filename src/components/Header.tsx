@@ -1,5 +1,9 @@
 import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
+
+
 
 function Header(props: { }) {
 
@@ -26,7 +30,7 @@ function Header(props: { }) {
                 }
             </ul>
             <div className='flex items-center gap-14'>
-                <div className='bg-black text-white py-2 px-6 font-medium cursor-pointer'>Connect</div>
+                <ConnectButton chainStatus={"full"} />
             </div>
         </div>
     );

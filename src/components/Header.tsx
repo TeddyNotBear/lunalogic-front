@@ -1,26 +1,33 @@
-
+import logo from '../images/logo.png';
+import { Link } from 'react-router-dom';
 
 function Header(props: { }) {
 
     const Menu = [
-        { title: "Marketplace" },
+        { title: "Discover", path: "discorver" },
+        { title: "Marketplace", path: "marketplace" },
+        { title: "Activity", path: "activity" },
     ];
 
     return (
-        <div className="flex justify-between items-center h-12">
-            <div>BRAND LOGO</div>
-            <ul>
+        <div className="flex justify-around items-center h-20">
+            <div>
+                <img className='h-10' src={logo} alt="logo"/>
+            </div>
+            <ul className='flex gap-10'>
                 {
                     Menu.map((menu, index) => (
                         <>
-                            <li key={index}>
-                                <span>{ menu.title }</span>
+                            <li key={index} className="">
+                                <Link className='font-medium' to={``}>{ menu.title }</Link>
                             </li>
                         </>
                     ))
                 }
             </ul>
-            <div>CONNECT WALLET</div>
+            <div className='flex items-center gap-14'>
+                <div className='bg-black text-white py-2 px-6 font-medium cursor-pointer'>Connect</div>
+            </div>
         </div>
     );
 

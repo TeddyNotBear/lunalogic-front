@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/components/AccountModal.tsx", "src/components/ConnectButton.tsx"  ]
 }

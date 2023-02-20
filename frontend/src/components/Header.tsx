@@ -1,9 +1,7 @@
 import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-
-
-
+import { Button } from '@chakra-ui/react';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 function Header(props: { }) {
 
@@ -30,8 +28,10 @@ function Header(props: { }) {
                     ))
                 }
             </ul>
+            
             <div className='flex items-center gap-14'>
-                <ConnectButton chainStatus={"full"} />
+                <Button colorScheme="blue" variant="outline">Create</Button>
+                {/* <ConnectButton /> */}
             </div>
         </div>
     );

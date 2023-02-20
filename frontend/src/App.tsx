@@ -3,15 +3,16 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { Marketplace } from './pages/Marketplace';
 import { Footer } from './components/Footer';
 import "@rainbow-me/rainbowkit/styles.css";
-import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { DisclaimerComponent, getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { polygon, goerli } from "wagmi/chains";
+import { polygon, goerli, polygonMumbai } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
+import { Header } from './components/Header';
 
 
 const { chains, provider } = configureChains(
-  [polygon,goerli],
+  [polygon,goerli,polygonMumbai],
   [
       alchemyProvider({ apiKey: "DLFqqS3LCqxKMGMaMSBxvg8VkvD_kbac"}),
       publicProvider(),
@@ -19,7 +20,7 @@ const { chains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "Simple Dapp",
+  appName: "Lunalogic-app",
   chains,
 });
 
@@ -31,18 +32,18 @@ const wagmiClient = createClient({
 
 function App() {
   return (
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
-        <ChakraProvider>
+    <ChakraProvider>
+      <WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider chains={chains}>
           <div className='h-screen'>
-            <Header />
-            <hr/>
-            <Marketplace />
-            <Footer />
+              <Header />
+              <hr/>
+              <Marketplace />
+              <Footer />
           </div>
-        </ChakraProvider>
-      </RainbowKitProvider>
-    </WagmiConfig>
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </ChakraProvider>
   );
 }
 
